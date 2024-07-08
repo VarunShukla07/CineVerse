@@ -10,11 +10,7 @@ export default function Header() {
     <div className="flex justify-between mx-2 max-w-6xl sm:mx-auto items-center py-6">
         <div className="flex">
             <MenuItem title="HOME" address="/" Icon={AiFillHome}/>
-            <Link href="/about/page">
-                    <a className="flex items-center text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
-                      <BsFillInfoCircleFill className="mr-2" /> ABOUT
-                    </a>
-            </Link>
+            <MenuItem title="ABOUT" address="https://imdb-clone-chi-lovat.vercel.app/about" Icon={BsFillInfoCircleFill}/>
         </div>
         <div className="flex items-center space-x-5">
           <DarkModeSwitch/>
