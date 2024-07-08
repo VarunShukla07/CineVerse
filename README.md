@@ -1,4 +1,4 @@
-CinVerse provide user interface where users can explore the latest trending and top-rated movies of all time. They can view detailed movie information, including ratings, and utilize a search feature to find specific movie details.
+CineVerse provide user interface where users can explore the latest trending and top-rated movies of all time. They can view detailed movie information, including ratings, and utilize a search feature to find specific movie details.
 
 About Page with dark mode feature:
 
