@@ -31,6 +31,7 @@ export default async function MoviePage({ params }) {
                     ></Image>
                     <div className="p-2">
                         <h2 className="text-lg mb-3 font-bold">
+                        <span className="font-semibold mr-1">Movie Name:</span>
                             {movie.title || movie.name}
                         </h2>
                         <p className="text-lg mb-3">
@@ -44,6 +45,10 @@ export default async function MoviePage({ params }) {
                         <p className="mb-3">
                             <span className="font-semibold mr-1">Rating:</span>
                             {movie.vote_count}
+                        </p>
+                        <p className="mb-3">
+                            <span className="font-semibold mr-1">Popularity:</span>
+                            {movie.popularity}
                         </p>
                     </div>
 

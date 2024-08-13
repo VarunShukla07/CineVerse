@@ -7,11 +7,23 @@ const API_KEY = process.env.API_KEY;
 export default async function Home({ searchParams }) {
   const genre = searchParams.genre || "fetchTrending";
 
+  // Determine the endpoint based on the genre
+  let endpoint;
+  switch (genre) {
+    case "fetchTopRated":
+      endpoint = "movie/top_rated";
+      break;
+    case "fetchUpcoming":
+      endpoint = "movie/popular";
+      break;
+    default:
+      endpoint = "trending/all/week";
+      break;
+  }
+
   const res = await fetch(
-    `https://api.themoviedb.org/3/${
-      genre === "fetchTopRated" ? "movie/top_rated" : "trending/all/week"
-    }?api_key=${API_KEY}&language=en-US&page=1`,
-    { next: { revalidate: 10000 } }
+    `https://api.themoviedb.org/3/${endpoint}?api_key=${API_KEY}&language=en-US&page=1`,
+    { next: { revalidate: 20000 } }
   );
 
   if (!res.ok) {
